@@ -7,3 +7,15 @@ const link = encodeMessage(phoneNumber, message);
 const whatsappLink = document.getElementById("whatsapp-link");
 whatsappLink.href = link;
 whatsappLink.target = "_blank";
+
+const footerButtons = document.querySelectorAll(".buttons-just-text");
+const footer = document.querySelector("footer");
+
+for (const button of footerButtons) {
+    button.addEventListener("click", () => {
+        footer.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    });
+}
